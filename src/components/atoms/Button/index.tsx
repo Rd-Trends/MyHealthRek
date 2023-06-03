@@ -3,7 +3,6 @@
 import React from "react";
 import styles from "./button.module.scss";
 import { ButtonGenre, ButtonProps, ButtonSize, ButtonVariant } from "@/types";
-
 const Button = ({
   children,
   genre = ButtonGenre.Button,
