@@ -12,9 +12,9 @@ export enum SwitchVariant {
 export type SwitchProps = {
   size?: SwitchSize;
   variant?: SwitchVariant;
-  onChange: (checked: boolean) => void;
   name: string;
   value: string;
+  onChange: (checked: boolean) => void;
   defaultChecked?: boolean;
   [x: string]: any;
 };

@@ -1,0 +1,29 @@
+.radioGroup {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding: 5px;
+}
+
+.radioItme {
+  &[data-RadioVaraint="active"] {
+    // box-sizing: border-box;
+    // position: absolute;
+    width: 16px;
+    height: 16px;
+    //   left: 20px;
+    //   top: 20px;
+    border: 1px solid #26b0a1;
+    border-radius: 24px;
+    cursor: pointer;
+  }
+}
+
+.radioIndicator {
+  &[data-RadioVaraint="active"] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #26b0a1;
+  }
+}

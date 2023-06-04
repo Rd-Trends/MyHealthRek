@@ -1,36 +1,54 @@
 "use client";
 
-import { Button, Switch } from "@/components/atoms";
-import { LeftArrowIcon } from "@/components/vectors";
+import { Switch, Button, RadioButton } from "@/components/atoms";
+import {
+
+  LeftArrowIcon,Unlock
+
+} from "@/components/vectors";
 import {
   ButtonGenre,
   ButtonSize,
   ButtonVariant,
   SwitchSize,
   SwitchVariant,
+  RadioVaraint,
 } from "@/types";
 
 import React from "react";
 
 const HomeContainer = () => {
   return (
-    <div style={{ backgroundColor: "rebeccapurple" }}>
-      <Button
-        genre={ButtonGenre.Icon}
-        size={ButtonSize.Medium}
-        variant={ButtonVariant.Primary}
-        onClick={() => console.log("hello")}
-      >
+    <>
+      <div style={{ backgroundColor: "rebeccapurple" }}>
+        <Button
+          genre={ButtonGenre.Icon}
+          size={ButtonSize.Medium}
+          variant={ButtonVariant.Primary}
+          onClick={() => console.log("hello")}
+        >
+          <Unlock  />
+
+        </Button>
         <LeftArrowIcon />
-      </Button>
-      <Switch
-        size={SwitchSize.Large}
-        variant={SwitchVariant.Secondary}
-        name="switch"
-        value="switch"
-        onChange={(data) => console.log(data)}
-      />
-    </div>
+
+        <Switch
+          size={SwitchSize.Large}
+          variant={SwitchVariant.Secondary}
+          name="switch"
+          value="switch"
+          onChange={(data) => console.log(data)}
+        />
+        <RadioButton
+          variant={RadioVaraint.active}
+          name="radio"
+          value="radio"
+          onChange={(data) => console.log(data)}
+        />
+      </div>
+
+      <div></div>
+    </>
   );
 };
 
