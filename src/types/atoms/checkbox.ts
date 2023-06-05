@@ -1,9 +1,15 @@
-export enum Checkboxdisabled {
+export enum CheckboxVariant {
+  Checked = "checked",
+  Unchecked = "unchecked",
+}
+
+export enum disabledCheck {
   Disabled = "disabled",
   Abled = "abled",
 }
 
-export type checkboxType = {
-  disabled: boolean;
-  checked: boolean;
+export type checkboxProp = {
+  disabled?: disabledCheck;
+  checked: CheckboxVariant;
+  onChange: (checked: boolean) => void;
 };
