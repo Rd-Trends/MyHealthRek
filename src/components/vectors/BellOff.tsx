@@ -1,15 +1,22 @@
 import * as React from "react"
 import { SVGProps } from "react"
-const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
+const BellOff = ({
+  width = 24,
+  height = 23,
+  fill = "currentColor",
+  opacity = 1,
+  ...attribs
+}: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
-    fill="none"
-    {...props}
+    width={width}
+    height={height}
+    fill={fill}
+    {...attribs}
   >
     <g
-      stroke="#000"
+      opacity={opacity}
+      stroke={fill}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={2}
@@ -24,4 +31,4 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 )
-export default SvgComponent
+export default BellOff

@@ -2,9 +2,13 @@
 
 import { Switch, Button, RadioButton } from "@/components/atoms";
 import {
-
-  LeftArrowIcon,Unlock
-
+  Arrowcircleleft2,
+  
+  Notification,
+  Power,
+  Star,
+  Truck,
+  Unlock,
 } from "@/components/vectors";
 import {
   ButtonGenre,
@@ -27,10 +31,10 @@ const HomeContainer = () => {
           variant={ButtonVariant.Primary}
           onClick={() => console.log("hello")}
         >
-          <Unlock  />
+          <Truck />
 
         </Button>
-        <LeftArrowIcon />
+        <Arrowcircleleft2 />
 
         <Switch
           size={SwitchSize.Large}

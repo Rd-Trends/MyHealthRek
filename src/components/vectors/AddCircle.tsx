@@ -1,15 +1,22 @@
 import * as React from "react"
 import { SVGProps } from "react"
-const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
+const AddCircle = ({
+  width = 25,
+  height = 25,
+  fill = "currentColor",
+  opacity = 1,
+  ...attribs
+}: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24px"
-    height="24px"
-    fill="none"
-    {...props}
+    width={width}
+    height={height}
+    fill={fill}
+    {...attribs}
   >
     <path
-      stroke="#000"
+       opacity={opacity}
+       stroke={fill}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth={1.5}
@@ -17,4 +24,4 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 )
-export default SvgComponent
+export default AddCircle

@@ -1,15 +1,22 @@
 import * as React from "react"
 import { SVGProps } from "react"
-const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
+const Health = ({
+  width = 24,
+  height = 23,
+  fill = "currentColor",
+  opacity = 1,
+  ...attribs
+}: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="2.4em"
-    height="2.4em"
-    fill="none"
-    {...props}
+    width={width}
+    height={height}
+    fill={fill}
+    {...attribs}
   >
     <path
-      fill="#000"
+      opacity={opacity}
+      stroke={fill}
       d="M14.97 21.802h-6c-5.43 0-7.75-2.223-7.75-7.427v-5.75c0-5.204 2.32-7.427 7.75-7.427h6c5.43 0 7.75 2.223 7.75 7.427v5.75c0 5.204-2.31 7.427-7.75 7.427Zm-6-19.166c-4.61 0-6.25 1.571-6.25 5.99v5.75c0 4.417 1.64 5.989 6.25 5.989h6c4.61 0 6.25-1.572 6.25-5.99v-5.75c0-4.418-1.64-5.99-6.25-5.99h-6Z"
     />
     <path
@@ -18,4 +25,4 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
     />
   </svg>
 )
-export default SvgComponent
+export default Health

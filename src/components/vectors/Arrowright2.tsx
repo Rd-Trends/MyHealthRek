@@ -1,16 +1,23 @@
 import * as React from "react"
 import { SVGProps } from "react"
-const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
+const Arrowright2 = ({
+  width = 24,
+  height = 23,
+  fill = "currentColor",
+  opacity = 1,
+  ...attribs
+}: SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="2.3em"
-    height="2.4em"
-    fill="none"
-    {...props}
+    width={width}
+    height={height}
+    fill={fill}
+    {...attribs}
   >
     <g clipPath="url(#a)">
       <path
-        stroke="#000"
+        opacity={opacity}
+        stroke={fill}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeMiterlimit={10}
@@ -25,4 +32,4 @@ const SvgComponent = (props: SVGProps<SVGSVGElement>) => (
     </defs>
   </svg>
 )
-export default SvgComponent
+export default Arrowright2
