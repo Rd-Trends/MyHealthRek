@@ -1,0 +1,25 @@
+.checkboxRoot {
+  box-sizing: border-box;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+
+  &[data-disabled="abled"] {
+    border: 1px solid #26b0a1;
+  }
+
+  &[data-disabled="disabled"] {
+    border: 1px solid #83868d;
+  }
+}
+
+.checkboxIndicator {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 31.25%;
+  bottom: 31.25%;
+  width: 8px;
+  height: 6px;
+}
