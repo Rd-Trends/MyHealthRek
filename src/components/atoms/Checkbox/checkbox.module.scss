@@ -1,25 +1,52 @@
-.checkboxRoot {
-  box-sizing: border-box;
-  position: relative;
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
+.checkboxWrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 
-  &[data-disabled="abled"] {
-    border: 1px solid #26b0a1;
+  .checkbox {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    border: 1px solid var(--primary_400);
+    color: var(--primary_400);
+    cursor: pointer;
   }
 
-  &[data-disabled="disabled"] {
-    border: 1px solid #83868d;
+  &[data-variant="secondary"] {
+    .checkbox {
+      border-color: var(--secondary_300);
+      color: var(--secondary_300);
+    }
   }
+
+  &[data-variant="tertiary"] {
+    .checkbox {
+      border-color: var(--tertiary_300);
+      color: var(--tertiary_300);
+    }
+  }
+
+  &[data-disabled="true"] {
+    cursor: none;
+    color: var(--black_100);
+
+    .checkbox {
+      border-color: var(--black_100);
+      color: var(--black_100);
+    }
+  }
+
+  &[data-size="large"] {
+    //** target checbox here
+  }
+
+  // do the same for small
+
+  // no need for medium as it is the default size
 }
 
-.checkboxIndicator {
-  position: absolute;
-  left: 25%;
-  right: 25%;
-  top: 31.25%;
-  bottom: 31.25%;
-  width: 8px;
-  height: 6px;
+.checkboxWrapper > * + * {
+  margin-left: 1.6rem;
 }

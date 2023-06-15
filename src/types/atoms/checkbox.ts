@@ -1,15 +1,20 @@
+import { CheckboxProps } from "@radix-ui/react-checkbox";
+
 export enum CheckboxVariant {
-  Checked = "checked",
-  Unchecked = "unchecked",
+  Primary = "primary",
+  Secondary = "secondary",
+  Tertiary = "tertiary",
 }
 
-export enum disabledCheck {
-  Disabled = "disabled",
-  Abled = "abled",
+export enum CheckboxSize {
+  Large = "large",
+  Medium = "medium",
+  Small = "small",
 }
 
-export type checkboxProp = {
-  disabled?: disabledCheck;
-  checked: CheckboxVariant;
-  onChange: (checked: boolean) => void;
+export type CheckboxProp = CheckboxProps & {
+  label?: string;
+  disabled?: boolean;
+  variant?: CheckboxVariant;
+  [key: string]: any;
 };
