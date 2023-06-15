@@ -18,8 +18,7 @@ const Button = ({
       data-genre={genre}
       data-variant={variant}
       data-outline={outline}
-      {...attribs}
-    >
+      {...attribs}>
       {children}
     </button>
   );

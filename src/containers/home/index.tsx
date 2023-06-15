@@ -1,26 +1,35 @@
 "use client";
 
-import { Button, Switch, CheckBox } from "@/components/atoms";
-import { LeftArrowIcon } from "@/components/vectors";
+import { Button, Switch, Checkbox, RadioGroup } from "@/components/atoms";
 import {
   ButtonGenre,
-  ButtonSize,
-  ButtonVariant,
+  CheckboxSize,
+  CheckboxVariant,
+  RadioItemVariant,
   SwitchSize,
   SwitchVariant,
-  CheckboxVariant,
-  disabledCheck,
 } from "@/types";
 
 import React from "react";
 const HomeContainer = () => {
   return (
-    <div style={{ backgroundColor: "rebeccapurple" }}>
-      <CheckBox
-        checked={CheckboxVariant.Checked}
-        disabled={disabledCheck.Abled}
-        onChange={(data) => data}
-      ></CheckBox>
+    <div
+      style={{
+        backgroundColor: "yellow",
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        gap: "2rem",
+      }}>
+      <Checkbox label="hello" value="rice" variant={CheckboxVariant.Primary} />
+      <RadioGroup
+        variant={RadioItemVariant.Tertiary}
+        options={[
+          { label: "label", value: "value" },
+          { label: "label1", value: "value1" },
+          { label: "label2", value: "value2" },
+        ]}
+      />
     </div>
   );
 };

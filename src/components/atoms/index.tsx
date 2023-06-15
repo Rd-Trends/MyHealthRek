@@ -1,4 +1,5 @@
 import Button from "./Button";
 import Switch from "./Switch";
-import CheckBox from "./Checkbox";
-export { Button, Switch, CheckBox };
+import Checkbox from "./Checkbox";
+import RadioGroup from "./RadioGroup";
+export { Button, Switch, Checkbox, RadioGroup};

@@ -1,0 +1,65 @@
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+
+  .radioItemWrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    > * + * {
+      margin-left: 1.6rem;
+    }
+
+    .radioItem {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+      background-color: transparent;
+      border: 1px solid var(--primary_400);
+      cursor: pointer;
+    }
+
+    .radioItemIndicator {
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      background-color: var(--primary_400);
+    }
+
+    &[data-variant="secondary"] {
+      .radioItem {
+        border-color: var(--secondary_300);
+      }
+
+      .radioItemIndicator {
+        background-color: var(--secondary_300);
+      }
+    }
+
+    &[data-variant="tertiary"] {
+      .radioItem {
+        border-color: var(--tertiary_300);
+      }
+
+      .radioItemIndicator {
+        background-color: var(--tertiary_300);
+      }
+    }
+
+    &[data-size="large"] {
+      // ** target radioItem and radioIndicator here
+    }
+
+    //** do the same for small
+
+    //** no need for medium as it is the default size
+  }
+}
+
+.radioGroup > * + * {
+  margin-top: 1rem;
+}

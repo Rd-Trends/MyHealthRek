@@ -1,26 +1,30 @@
 "use client";
 import React from "react";
 import styles from "./checkbox.module.scss";
-import * as Checkbox from "@radix-ui/react-checkbox";
-// testing icons this should be changed when all icon  are availabe
-import { LeftArrowIcon } from "@/components/vectors";
-import { checkboxProp, CheckboxVariant, disabledCheck } from "@/types";
-const CheckBox = ({
-  checked = CheckboxVariant.Unchecked,
-  disabled = disabledCheck.Disabled,
-  onChange,
-}: checkboxProp) => {
+import * as RUICheckbox from "@radix-ui/react-checkbox";
+import { CheckboxProp, CheckboxSize, CheckboxVariant } from "@/types";
+import { BiCheck } from "react-icons/bi";
+
+const Checkbox = ({
+  label,
+  disabled = false,
+  variant = CheckboxVariant.Primary,
+  size = CheckboxSize.Medium,
+  ...rest
+}: CheckboxProp) => {
   return (
-    <Checkbox.Root
-      className={styles.checkboxRoot}
+    <label
       data-disabled={disabled}
-      onCheckedChange={onChange}
-    >
-      <Checkbox.Indicator />
-      {checked === CheckboxVariant.Checked && (
-        <LeftArrowIcon className={styles.checkboxIndicator} />
-      )}
-    </Checkbox.Root>
+      data-size={size}
+      data-variant={variant}
+      className={styles.checkboxWrapper}>
+      <RUICheckbox.Root disabled={disabled} className={styles.checkbox} {...rest}>
+        <RUICheckbox.Indicator className={styles.checkIndicator}>
+          <BiCheck size={16} />
+        </RUICheckbox.Indicator>
+      </RUICheckbox.Root>
+      {label && <span className={styles.checkboxLabel}>{label}</span>}
+    </label>
   );
 };
-export default CheckBox;
+export default Checkbox;
